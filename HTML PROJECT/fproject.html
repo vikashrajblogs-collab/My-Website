@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Site</title>
+    <link rel="icon" type="icon/x-image" href="Assest/Assest/android-chrome-192x192.png">
+    <style>
+        @keyframes vikashBabu {
+            0% {
+                transform: translateX(100);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Navigation Bar Ka Style */
+     ol {
+        list-style-type: none;
+     }
+     #nav-page ol {
+        display: flex;
+        justify-content: center;
+        gap: 225px;
+        
+        
+        
+     }
+     #nav-page ol li a {
+        text-decoration: none;
+        background-color: red;
+        
+     }
+     #nav-page li {
+      width: 90px;
+      
+     }
+     #nav-page a {
+        display: flex;
+        width: 90px;
+        height: 30px;
+        align-items: center;
+        color: white;
+        padding: 5px 5px;
+        padding-left: 55px;
+        margin-left: -40px;
+        border-radius: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        box-shadow: 0 8px 15px black;
+        
+     }
+     #nav-page {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 15px;
+     }
+     #nav-page a:hover {
+        background-color: green;
+        font-size: 16px;
+     }
+
+     /* Explore Page Ka Style */
+
+     #explore-page {
+        display: none;
+       top: 0;
+        z-index: 1000;
+        padding: 40px;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color: rgb(153, 255, 173);
+        overflow-y: auto;
+        animation: vikashBabu 1s ease-out;
+     }
+
+     /* Story Page Ka Style */
+
+     #story-page {
+        background-color: rgb(252, 105, 105);
+        padding: 35px;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        position: fixed;
+        top: 0;
+        overflow-y: auto;
+        display: none;
+     }
+
+     /* Explore Button Ka Style */
+
+     .explore-back-btn {
+        background-color: rgb(253, 4, 4);
+        color: black;
+      margin-top: -60px;
+      display: flex;
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      border-radius: 15px;
+      cursor: pointer;
+     }
+
+     /* Story Button La Style */
+
+     .story-back-btn {
+        background-color: yellow;
+        color: black;
+      margin-top: -180px;
+      display: flex;
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      border-radius: 15px;
+      cursor: pointer;
+     }
+      
+     /* Library Page Ka Style */
+
+       #library-page {
+        background-color: aquamarine;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        overflow-y: auto;
+        z-index: 1000;
+        padding: 35px;
+        display: none;
+        animation: vikashBabu 0.5s ease-out;
+       }
+
+       /* Library Back Button Ka Style */
+
+       .library-back-btn {
+        background-color: red;
+        width: 60px;
+        height: 22px;
+        border-radius: 10px;
+        margin-top: -320px;
+        display: flex;
+        cursor: pointer;
+        box-shadow: 0 4px 9px black;
+       }
+       .library-back-btn:hover {
+        background-color: green;
+        font-weight: bold;
+        color: white;
+       }
+
+       /* Love Pge Ka Style */
+
+       #love-page {
+        width: 800px;
+        height: 100px;
+        background-color: yellow;
+        margin-left: 200px;
+        display: flex;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 35px;
+        font-weight: bold;
+       }
+
+       /* Romantic List Ka Style */
+
+       #romantic-page {
+        width: 800px;
+        height: 100px;
+        background-color: yellow;
+        display: flex;
+        margin-left: 200px;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 35px;
+        font-weight: bold;
+       }
+
+       /* Sad List Ka Style */
+
+       #sad-page {
+        width: 800px;
+        height: 100px;
+        background-color: yellow;
+        display: flex;
+        margin-left: 200px;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 35px;
+        font-weight: bold;
+       }
+
+
+       /* Love Story Page Ka Style */
+
+       #love-story {
+        background-color: wheat;
+        width: 100%;
+        height: 100%;
+        display: none;
+        z-index: 1000;
+        overflow-y: auto;
+        padding: 35px;
+        top: 0;
+        position: fixed;
+        
+       }
+
+       /* Love Page Button Ka Style */
+
+       .love-page-btn {
+        background-color: blue;
+        color: aliceblue;
+        cursor: pointer;
+        display: flex;
+        margin-top: -710px;
+        width: 60px;
+        height: 21px;
+        border-radius: 10px;
+        box-shadow: 0 3px 9px black;
+       }
+       .love-page-btn:hover {
+        background-color: red;
+        font-weight: bold;
+       }
+     
+    </style>
+</head>
+<body>
+    <header><h1 style="text-align: center; color: blue; font-size: 50px; font-weight: 800; text-shadow: 0 5px 13px black;"><a href="#">Story Store</a></h1></header><br><p style="text-align: center;margin-top: -50px; font-size: 10px; color: brown;">Directed By Vikash Sharma</p>
+
+    <img src="https://img10.hotstar.com/image/upload/f_auto,q_auto/sources/r1/cms/prod/1749/1707131141749-i" alt="story image" width="1250px" height="500px" style="animation: vikashBabu 0.5s ease-out;">
+
+    <!-- Ye Hai Navigation Bar -->
+
+    <nav id="nav-page">
+        <ol>
+            <li><a href="#" onclick="exploreBtn()">Explore</a></li>
+            <li><a href="#" onclick="storyBtn()">Story</a></li>
+            <li><a href="#" onclick="libraryBtn()">Library</a></li>
+            <li><a href="#" onclick="settingBtn()">Setting</a></li>
+        </ol>
+    </nav>
+
+    <!-- Ye Hai Full Explore Page -->
+
+    <div id="explore-page">
+        <h2 style="text-align: center;">Explore Page</h2>
+        <button class="explore-back-btn" onclick="ebackBtn()">x</button>
+    </div>
+
+    <!-- Full Stpry Page -->
+
+    <div id="story-page">
+        <p><h2 style="text-align: center;">This Is Story Page</h2></p>
+        <div style="width: 500px; height: 100px; background-color: blue; color: white; text-align: center; border-radius: 20px; box-shadow: 0 7px 13px black;">
+           <a href="https://youtu.be/Y0kSX4Zr3XE?si=GZ0Unuaj3GqV4Wy1" target="_blank" style="color: white; text-decoration: none; font-size: 20px; font-weight: bold;">Dil De Diya Hai</a>
+            <p>Love Story ❤</p>
+            <a class="read-story" href="https://www.thesunmagazine.org/articles/27395-love-stories" target="_blank" style="color: white; text-decoration: none; text-align: center; margin-left: 148px;"><u>Read Story</u></a>
+            <img src="https://img10.hotstar.com/image/upload/f_auto,q_auto/sources/r1/cms/prod/1749/1707131141749-i" alt="Love" width="140px" height="80px" style="transform: translateX(-280px); margin-top: -65px;">
+        </div>
+        <button class="story-back-btn" onclick="sbackBtn()">x</button>
+    </div>
+
+    <!-- Full Library Page -->
+
+    <div id="library-page">
+    <div id="love-page" onclick="lovePage()">
+        <ul><li>Love Story</li></ul>
+    </div><br>
+    <div id="romantic-page" onclick="romanticPage()">
+        <ul><li>Romantic Story</li></ul>
+    </div><br>
+    <div id="sad-page" onclick="sadPage()">
+        <ul><li>Sad Story</li></ul>
+    </div>
+    <button class="library-back-btn" onclick="lbackBtn()">back</button>
+    </div>
+
+    <!-- Love Story Box 1 -->
+
+    <div id="love-story">
+        <h2 style="text-align: center;">Love Story Page</h2>
+        <div style="width: 330px; height: 100px; background-color: green; border-radius: 20px;"> 
+            <h3 style="text-align: center;"><b>Tere Ishq Piya</b></h3>
+            <p style="text-align: center;">Love Story ❤</p>
+            <a href="https://www.thesunmagazine.org/articles/27395-love-stories" target="_blank" style="color: white; margin-left: 120px;">Read Story</a>
+        </div>
+
+       <!-- Love Story Box 2 -->
+
+        <div style="width: 320px; height: 100px; background-color: green; border-radius: 20px; margin-left: 440px; margin-top: -99px; padding: 0 0 0;">
+            <h3 style="text-align: center; display: flex; margin-left: 120px; margin-top: -20px;"><b>Mere Piya Deewana</b></h3><br>
+            <p style="text-align: center; display: flex; margin-top: -20px; margin-left: 120px;">Love Story ❤</p><br>
+            <a href="" style="color: white; margin-left: 120px; margin-top: -20px; display: flex;">Read Story</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc7xvFMHlcCTbXxaw1DwOXMOTsexGWnC9yaA&s" width="90px" height="90px" style="display: flex; margin-left: 10px; margin-top: -85px; border-radius: 15px;">
+        </div>
+
+         <!-- Love Story Box 3 -->
+
+        <div style="width: 320px; height: 100px; background-color: green; border-radius: 20px; margin-left: 860px; margin-top: -117px; padding: 0 0 0;">
+            <h3 style="text-align: center;display: flex; margin-left: 120px;"><b>Mere Piya Handsome</b></h3>
+            <p style="text-align: center; display: flex; margin-left: 120px; margin-top: 20px;">Love Story ❤</p>
+            <a href="" style="color: white; margin-left: 120px; display: flex; margin-top: -4px;">Read Story</a>
+            <img src="https://images.stockcake.com/public/0/c/6/0c66db9c-7066-496b-9c1b-9daa65d7e01f_large/silhouette-love-moment-stockcake.jpg" width="90px" height="90px" style="display: flex; margin-left: -850px; margin-top: -90px; border-radius: 15px;">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiAMY1IGtkpnL144Y7qoXrlFot0dSCWtrg7Q&s" width="90px" height="90px" style="display: flex; margin-left: 10px; margin-top: -87px; border-radius: 15px;">
+        </div>
+
+        <!-- Love Story Box 4 -->
+
+        <div style="width: 329px; height: 100px; background-color: green; border-radius: 20px; margin-left: 0px; margin-top: 35px; padding: 0 0 0;">
+            <h3 style="text-align: center;display: flex; margin-left: 120px;"><b>Mere Piya Handsome</b></h3>
+            <p style="text-align: center; display: flex; margin-left: 120px; margin-top: 20px;">Love Story ❤</p>
+            <a href="" style="color: white; margin-left: 120px; display: flex; margin-top: -4px;">Read Story</a>
+            <img src="https://images.stockcake.com/public/0/c/6/0c66db9c-7066-496b-9c1b-9daa65d7e01f_large/silhouette-love-moment-stockcake.jpg" width="90px" height="90px" style="display: flex; margin-left: 9px; margin-top: -87px; border-radius: 15px;">
+        </div>
+
+        <!-- Love Story Box 5 -->
+
+        <div style="width: 320px; height: 100px; background-color: green; border-radius: 20px; margin-left: 440px; margin-top: -99px; padding: 0 0 0;">
+            <h3 style="text-align: center; display: flex; margin-left: 120px; margin-top: -20px;"><b>Mere Piya Deewana</b></h3><br>
+            <p style="text-align: center; display: flex; margin-top: -20px; margin-left: 120px;">Love Story ❤</p><br>
+            <a href="" style="color: white; margin-left: 120px; margin-top: -20px; display: flex;">Read Story</a>
+            <img src="https://images.stockcake.com/public/0/c/6/0c66db9c-7066-496b-9c1b-9daa65d7e01f_large/silhouette-love-moment-stockcake.jpg" width="90px" height="90px" style="display: flex; margin-left: 10px; margin-top: -85px; border-radius: 15px;">
+        </div>
+
+  <!-- Love Story Box 6 -->
+
+  <div style="width: 320px; height: 100px; background-color: green; border-radius: 20px; margin-left: 860px; margin-top: -117px; padding: 0 0 0;">
+            <h3 style="text-align: center;display: flex; margin-left: 120px;"><b>Mere Piya Handsome</b></h3>
+            <p style="text-align: center; display: flex; margin-left: 120px; margin-top: 20px;">Love Story ❤</p>
+            <a href="" style="color: white; margin-left: 120px; display: flex; margin-top: -4px;">Read Story</a>
+            <img src="https://images.stockcake.com/public/0/c/6/0c66db9c-7066-496b-9c1b-9daa65d7e01f_large/silhouette-love-moment-stockcake.jpg" width="90px" height="90px" style="display: flex; margin-left: 10px; margin-top: -87px; border-radius: 15px;">
+            </div>
+
+            <!-- Love Story Box 7 -->
+
+            <div style="width: 329px; height: 100px; background-color: green; border-radius: 20px; margin-left: 0px; margin-top: 35px; padding: 0 0 0;">
+            <h3 style="text-align: center;display: flex; margin-left: 120px;"><b>Mere Piya Handsome</b></h3>
+            <p style="text-align: center; display: flex; margin-left: 120px; margin-top: 20px;">Love Story ❤</p>
+            <a href="" style="color: white; margin-left: 120px; display: flex; margin-top: -4px;">Read Story</a>
+            <img src="https://images.stockcake.com/public/0/c/6/0c66db9c-7066-496b-9c1b-9daa65d7e01f_large/silhouette-love-moment-stockcake.jpg" width="90px" height="90px" style="display: flex; margin-left: 9px; margin-top: -87px; border-radius: 15px;">
+        </div>
+
+        <!-- Love story Box 8 -->
+        
+        <div style="width: 320px; height: 100px; background-color: green; border-radius: 20px; margin-left: 440px; margin-top: -99px; padding: 0 0 0;">
+            <h3 style="text-align: center; display: flex; margin-left: 120px; margin-top: -20px;"><b>Mere Piya Deewana</b></h3><br>
+            <p style="text-align: center; display: flex; margin-top: -20px; margin-left: 120px;">Love Story ❤</p><br>
+            <a href="" style="color: white; margin-left: 120px; margin-top: -20px; display: flex;">Read Story</a>
+            <img src="https://images.stockcake.com/public/0/c/6/0c66db9c-7066-496b-9c1b-9daa65d7e01f_large/silhouette-love-moment-stockcake.jpg" width="90px" height="90px" style="display: flex; margin-left: 10px; margin-top: -85px; border-radius: 15px;">
+        </div>
+
+        <!-- Love Story Box 9 -->
+
+         <div style="width: 320px; height: 100px; background-color: green; border-radius: 20px; margin-left: 860px; margin-top: -117px; padding: 0 0 0;">
+            <h3 style="text-align: center;display: flex; margin-left: 120px;"><b>Mere Piya Handsome</b></h3>
+            <p style="text-align: center; display: flex; margin-left: 120px; margin-top: 20px;">Love Story ❤</p>
+            <a href="" style="color: white; margin-left: 120px; display: flex; margin-top: -4px;">Read Story</a>
+            <img src="https://images.stockcake.com/public/0/c/6/0c66db9c-7066-496b-9c1b-9daa65d7e01f_large/silhouette-love-moment-stockcake.jpg" width="90px" height="90px" style="display: flex; margin-left: 10px; margin-top: -90px; border-radius: 15px;">
+            </div>
+
+            <!-- Love Story Box 10 -->
+
+            <div style="width: 329px; height: 100px; background-color: green; border-radius: 20px; margin-left: 0px; margin-top: 35px; padding: 0 0 0;">
+            <h3 style="text-align: center;display: flex; margin-left: 120px;"><b>Mere Piya Handsome</b></h3>
+            <p style="text-align: center; display: flex; margin-left: 120px; margin-top: 20px;">Love Story ❤</p>
+            <a href="" style="color: white; margin-left: 120px; display: flex; margin-top: -4px;">Read Story</a>
+            <img src="https://images.stockcake.com/public/0/c/6/0c66db9c-7066-496b-9c1b-9daa65d7e01f_large/silhouette-love-moment-stockcake.jpg" width="90px" height="90px" style="display: flex; margin-left: 9px; margin-top: -87px; border-radius: 15px;">
+        </div>
+
+        <!-- Love Story Box 11 -->
+
+        <div style="width: 320px; height: 100px; background-color: green; border-radius: 20px; margin-left: 440px; margin-top: -99px; padding: 0 0 0;">
+            <h3 style="text-align: center; display: flex; margin-left: 120px; margin-top: -20px;"><b>Mere Piya Deewana</b></h3><br>
+            <p style="text-align: center; display: flex; margin-top: -20px; margin-left: 120px;">Love Story ❤</p><br>
+            <a href="" style="color: white; margin-left: 120px; margin-top: -20px; display: flex;">Read Story</a>
+            <img src="https://images.stockcake.com/public/0/c/6/0c66db9c-7066-496b-9c1b-9daa65d7e01f_large/silhouette-love-moment-stockcake.jpg" width="90px" height="90px" style="display: flex; margin-left: 10px; margin-top: -85px; border-radius: 15px;">
+        </div>
+
+        <!-- Love Story Boe 12 -->
+
+        <div style="width: 320px; height: 100px; background-color: green; border-radius: 20px; margin-left: 860px; margin-top: -117px; padding: 0 0 0;">
+            <h3 style="text-align: center;display: flex; margin-left: 120px;"><b>Mere Piya Handsome</b></h3>
+            <p style="text-align: center; display: flex; margin-left: 120px; margin-top: 20px;">Love Story ❤</p>
+            <a href="" style="color: white; margin-left: 120px; display: flex; margin-top: -4px;">Read Story</a>
+            <img src="https://images.stockcake.com/public/0/c/6/0c66db9c-7066-496b-9c1b-9daa65d7e01f_large/silhouette-love-moment-stockcake.jpg" width="90px" height="90px" style="display: flex; margin-left: 10px; margin-top: -87px; border-radius: 15px;">
+            </div>
+
+            <!-- Love Story Box 13 -->
+
+             <div style="width: 329px; height: 100px; background-color: green; border-radius: 20px; margin-left: 0px; margin-top: 35px; padding: 0 0 0;">
+            <h3 style="text-align: center;display: flex; margin-left: 120px;"><b>Mere Piya Handsome</b></h3>
+            <p style="text-align: center; display: flex; margin-left: 120px; margin-top: 20px;">Love Story ❤</p>
+            <a href="" style="color: white; margin-left: 120px; display: flex; margin-top: -4px;">Read Story</a>
+            <img src="https://images.stockcake.com/public/0/c/6/0c66db9c-7066-496b-9c1b-9daa65d7e01f_large/silhouette-love-moment-stockcake.jpg" width="90px" height="90px" style="display: flex; margin-left: 9px; margin-top: -90px; border-radius: 15px;">
+        </div>
+
+        <!-- Love Story Box 14 -->
+
+        <div style="width: 320px; height: 100px; background-color: green; border-radius: 20px; margin-left: 440px; margin-top: -99px; padding: 0 0 0;">
+            <h3 style="text-align: center; display: flex; margin-left: 120px; margin-top: -20px;"><b>Mere Piya Deewana</b></h3><br>
+            <p style="text-align: center; display: flex; margin-top: -20px; margin-left: 120px;">Love Story ❤</p><br>
+            <a href="" style="color: white; margin-left: 120px; margin-top: -20px; display: flex;">Read Story</a>
+            <img src="https://images.stockcake.com/public/0/c/6/0c66db9c-7066-496b-9c1b-9daa65d7e01f_large/silhouette-love-moment-stockcake.jpg" width="90px" height="90px" style="display: flex; margin-left: 10px; margin-top: -85px; border-radius: 15px;">
+        </div>
+
+        <!-- Love Story Box 15 -->
+
+        <div style="width: 320px; height: 100px; background-color: green; border-radius: 20px; margin-left: 860px; margin-top: -117px; padding: 0 0 0;">
+            <h3 style="text-align: center;display: flex; margin-left: 120px;"><b>Mere Piya Handsome</b></h3>
+            <p style="text-align: center; display: flex; margin-left: 120px; margin-top: 20px;">Love Story ❤</p>
+            <a href="" style="color: white; margin-left: 120px; display: flex; margin-top: -4px;">Read Story</a>
+            <img src="https://images.stockcake.com/public/0/c/6/0c66db9c-7066-496b-9c1b-9daa65d7e01f_large/silhouette-love-moment-stockcake.jpg" width="90px" height="90px" style="display: flex; margin-left: 10px; margin-top: -87px; border-radius: 15px;">
+            </div>
+        <button class="love-page-btn" onclick="lpbackBtn()">back</button>
+    </div>
+    <script>
+
+        // Explore Page Ka Script
+
+        function exploreBtn() {
+            document.getElementById("explore-page").style.display = "block";
+        }
+        function ebackBtn() {
+            document.getElementById("explore-page").style.display = "none";
+        }
+
+        // Story Page Ka Script
+
+        function storyBtn() {
+            document.getElementById("story-page").style.display = "block";
+        }
+        function sbackBtn() {
+            document.getElementById("story-page").style.display = "none";
+        }
+
+        // Library Page Ka Script
+
+        function libraryBtn() {
+            document.getElementById("library-page").style.display = "block";
+        }
+        function lbackBtn() {
+            document.getElementById("library-page").style.display = "none";
+        }
+
+        // Love Page Ka Script
+
+        function lovePage() {
+            document.getElementById("love-story").style.display = "block";
+        }
+        function lpbackBtn() {
+            document.getElementById("love-story").style.display = "none";
+        }
+
+    </script>
+</body>
+</html> 

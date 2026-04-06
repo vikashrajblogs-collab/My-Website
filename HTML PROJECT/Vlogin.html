@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Site</title>
+    <link rel="icon" type="icon/x-image" href="Assest/Assest/android-chrome-192x192.png">
+    <style>
+         @keyframes vikashBabu {
+            0% {
+             transform: translateX(100%);
+             opacity: 0;
+            } 
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    #login-page {
+        text-align: center;
+        text-align: center;
+        color: aliceblue;
+        background-color: rgb(209, 243, 252);
+        width: 450px;
+        height: 395px;
+        margin-left: 428px;
+        border-radius: 9px;
+        box-shadow: 0px 6px 14px rgb(0, 255, 38);
+        transform: translateY(20px);
+        animation: vikashBabu 1.25s ease-out;
+    }
+    .lpage {
+       background-color: wheat;
+        width: 1250px;
+        height: 580px;
+        border-radius: 6px;
+ 
+    }
+    #login-btn {
+        background-color: yellow;
+        width: 100px;
+        height: 32px;
+        border-radius: 6px;
+        box-shadow: 0 3px 8px black;
+        font-weight: 700;
+        cursor: pointer;
+        
+    }
+    #login-btn:hover {
+      background-color: rgb(6, 41, 240);
+        color: red;
+        font-weight: bold;
+        border-radius: 13px;
+        text-shadow: 0 4px 8px black;  
+    }
+    #vname, #vmail, #vpass {
+        width: 240px;
+        height: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px black;
+    }
+    </style>
+</head>
+<body>
+    <div class="lpage">
+        <form id="login-page">
+            <h1 style="color: white; text-shadow: 0 4px 9px black; font-weight: 900; color: rgb(7, 220, 253);">Login Page</h1>
+            <label style="color: black;"><b>F Name</b></label><br>
+            <input type="text" id="vname" placeholder="First Name"><br><br>
+            <label style="color: black;"><b>Email Id</b></label><br>
+            <input type="email" id="vmail" placeholder="Email Id"><br><br>
+            <label style="color: black;"><b>Password</b></label><br>
+            <input type="password" id="vpass" placeholder="Password"><br><br><br>
+            <input type="button" id="login-btn" onclick="loginBtn()" value="Submit">
+            <p id="message"></p>
+        </form>
+    </div>
+    <script>
+     function loginBtn() {
+        let F = document.getElementById("vname").value;
+        let E = document.getElementById("vmail").value;
+        let P = document.getElementById("vpass").value;
+        let msg = document.getElementById("message");
+
+        let A = localStorage.getItem("seved_fname");
+        let B = localStorage.getItem("seved_gmail");
+        let C = localStorage.getItem("seved_pass");
+         
+       if(F === A && E === B && P === C) {
+        msg.innerHTML = "Login Succsesful";
+        msg.style.color = "lightgreen";
+
+        setTimeout(function() {
+            window.location.href = "fproject.html";
+        },1000);
+
+       } else {
+        msg.innerHTML = "Don't Match Data";
+        msg.style.color = "red";
+        msg.style.textShadow = "0 4px 9px black";
+       }
+     }
+    </script>
+</body>
+</html>
